@@ -1,0 +1,14 @@
+name:
+channels:
+  - defaults
+dependencies:
+  - conda-forge::pylint
+  - tensorflow=1.8
+  - conda-forge::pipreqs
+  - conda-forge::pipdeptree
+  - tqdm
+  - requests
+  - pillow
+  - scipy=1.0.0
+prefix: /home/ninhhk/repos/StarGAN-Tensorflow/env
+
