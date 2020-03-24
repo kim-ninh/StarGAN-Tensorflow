@@ -8,7 +8,7 @@ from tqdm import tqdm
 parser = argparse.ArgumentParser(description='Download dataset for StarGAN')
 parser.add_argument('dataset', metavar='N', type=str, nargs='+', choices=['celebA'],
                     help='name of dataset to download [celebA]')
-
+parser.add_argument('--with_pretrain', action='store_true')
 
 def download_file_from_google_drive(id, destination):
     URL = "https://docs.google.com/uc?export=download"
@@ -54,7 +54,7 @@ def download_celeb_a(dirpath):
     if os.path.exists(txt_save_path):
         print('[*] {} already exists'.format(txt_save_path))
     else:
-        download_file_from_google_drive(drive_id, txt_save_path)
+        download_file_from_google_drive(txt_drive_id, txt_save_path)
 
     if os.path.exists(save_path):
         print('[*] {} already exists'.format(save_path))
@@ -76,9 +76,22 @@ def prepare_data_dir(path='./dataset'):
         os.makedirs(path)
 
 
+def download_pretrain():
+    file_name = "checkpoint.zip"
+    save_path = os.path.join(".", file_name)
+    download_file_from_google_drive("1ezwtU1O_rxgNXgJaHcAynVX8KjMt0Ua-", save_path)
+
+    with zipfile.ZipFile(save_path) as zf:
+        zf.extractall(".")
+    
+
 if __name__ == '__main__':
     args = parser.parse_args()
     prepare_data_dir()
 
     if any(name in args.dataset for name in ['CelebA', 'celebA', 'celebA']):
         download_celeb_a('./dataset')
+
+    if args.with_pretrain == True:
+        download_pretrain()
+    

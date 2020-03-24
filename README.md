@@ -33,6 +33,7 @@
 * The celebA test image and the image you wanted run simultaneously
 
 ### Pretrained model
+* python download.py celebA --with_pretrain
 * Download [checkpoint for 128x128](https://drive.google.com/open?id=1ezwtU1O_rxgNXgJaHcAynVX8KjMt0Ua-)
 
 ## Summary
