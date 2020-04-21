@@ -1,5 +1,16 @@
-Pillow==7.0.0
+### Core scientific package
 scipy==1.0.0
-tensorflow==1.8.0
+
+# Easy http requests
+requests==2.23.0
+
+# Deep learning package
+# tensorflow==1.8.0
+# tensorflow-gpu=1.8.0
+
+# Image manipulation
+Pillow==7.0.0
+
+# Optional:
+# display nice progress bars
 tqdm==4.43.0
-requests=2.23.0
