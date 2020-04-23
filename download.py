@@ -45,8 +45,8 @@ def download_celeb_a(dirpath):
     celebA_dir = os.path.join(dirpath, data_dir)
     prepare_data_dir(celebA_dir)
 
-    file_name, drive_id = "img_align_celeba.zip", "1Pdh4NKLyzYmkjXgmmhOwLfWEIl3lO3aC"
-    txt_name, txt_drive_id = "list_attr_celeba.txt", "1vBc43_mhUZYfxy-bei87hLhAQA-WBVel"
+    file_name, drive_id = "img_align_celeba.zip", "1S2WCmNlNC2INXy2g8qf5vqgjqYmR0wvi"
+    txt_name, txt_drive_id = "list_attr_celeba.txt", "1MzjafP6o7TRVtf-_tn-q4fj6C5903uaq"
 
     save_path = os.path.join(dirpath, file_name)
     txt_save_path = os.path.join(celebA_dir, txt_name)
