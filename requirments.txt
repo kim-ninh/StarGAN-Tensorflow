@@ -14,3 +14,9 @@ Pillow==7.0.0
 # Optional:
 # display nice progress bars
 tqdm==4.43.0
+
+# Google API Client and OAuth2
+# in newer version, the is a bug when upload large file
+httplib2==0.15.0
+google-api-python-client==1.8.2
+oauth2client==4.1.3

@@ -117,3 +117,7 @@ results/
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
+
+# Google Client API
+client_id.json
+storage.json
